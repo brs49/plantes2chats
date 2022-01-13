@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+
+    <title>
+        Plantes toxiques chat
+    </title>
+    <center>
+          <img src="https://benasvusa.files.wordpress.com/2021/12/cropped-img_20211219_230934_279.jpg"><br>
+        <FONT color="#FFFFFF">
+      <h1><u>Liste des Plantes toxiques pour les chats :<br></h1></u>
+
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    
+</head>
+  
+<body>
+
+     <body style="background-color:#2D2828;">
+      
+    <!-- input tag -->
+    <input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Search...">
+      
+    <!-- ordered list -->
+
+    
+    
+    
+        <li class="animals">Aloès</li>
+        <li class="animals">Amaryllis </li>
+        <li class="animals">Amandier </li> 
+        <li class="animals">Azalée </li>
+        <li class="animals">Buis </li>
+        <li class="animals">Caladium </li>
+        <li class="animals">Chlorophytum </li>
+        <li class="animals">Chelidoine</li> 
+        <li class="animals">Ciguë</li>
+        <li class="animals">Cytise</li>  
+        <li class="animals">Colchique</li>
+        <li class="animals">Croton </li> 
+        <li class="animals">Datura </li>
+        <li class="animals">Digitale </li> 
+        <li class="animals">Dieffenbachia </li>
+        <li class="animals">Euphorbia </li> 
+        <li class="animals">Eucalyptus </li>
+        <li class="animals">Fougère </li> 
+        <li class="animals">Ficus </li> 
+        <li class="animals">Genèvrier </li>
+        <li class="animals">Ginkgo biloba </li>
+        <li class="animals">Hellebores </li>  
+        <li class="animals">Hortensia </li>
+        <li class="animals">Iris </li>  
+        <li class="animals">Jonquille </li>  
+        <li class="animals">Lauriers </li>  
+        <li class="animals">Lys </li>
+        <li class="animals">Muguet </li>  
+        <li class="animals">Philodendron </li>
+        <li class="animals">Poinctana </li>
+        <li class="animals">Seriman </li>  
+        <li class="animals">Thuya </li>
+        <li class="animals">Yucca  </li>
+
+    </FONT>
+   
+      
+    <!-- linking javascript -->
+    <script src="./animals.js"></script>
+    
+        <script type="text/javascript"> 
+        function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('animals');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+        function validate1() { 
+            var msg; 
+            var marquestr = document.getElementById("Marque").value; 
+             if (marquestr.length == 0) 
+                msg = "<p style='color:black'><b>Veuillez entrer un caratere.</b></p>"; 
+            document.getElementById("msg").innerHTML= msg; 
+        } 
+    </script> 
+</body>
+  </center>
+</html>
